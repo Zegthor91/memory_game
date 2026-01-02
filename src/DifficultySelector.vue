@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import Game from '../views/Game.vue'
+import Game from './Game.vue'
 
 const selectedDifficulty = ref(null)
 const gameStarted = ref(false)

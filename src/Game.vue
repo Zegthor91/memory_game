@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import Card from '../components/Card.vue'
+import Card from '../Card.vue'
 
 const props = defineProps({
   difficulty: {
