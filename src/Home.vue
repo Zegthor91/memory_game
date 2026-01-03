@@ -1,6 +1,7 @@
 <script setup>
+
 import { ref } from 'vue'
-import DifficultySelector from '../DifficultySelector.vue'
+import DifficultySelector from './DifficultySelector.vue'
 
 const showDifficultySelector = ref(false)
 

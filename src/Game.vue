@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import Card from '../Card.vue'
+import Card from './Card.vue'
 
 const props = defineProps({
   difficulty: {
@@ -96,7 +96,7 @@ function endGame() {
   setTimeout(() => {
     const username = prompt('Bravo ! Entrez votre pseudo :')
     if (username) {
-      alert(`Félicitations ${username} !\nTemps : ${formatTime(timer.value)}\nEssais : ${attempts.value}`)
+      alert(`Félicitations ${username} !\nTemps : ${formatTime.value(timer.value)}\nEssais : ${attempts.value}`)
     }
   }, 500)
 }
