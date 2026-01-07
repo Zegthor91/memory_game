@@ -123,15 +123,15 @@ onMounted(() => {
       <h2>Memory Game - {{ difficulty.label }}</h2>
       <div class="game-stats">
         <div class="stat">
-          <span class="stat-label">⏱️ Temps :</span>
+          <span class="stat-label">Temps:</span>
           <span class="stat-value">{{ formatTime(timer) }}</span>
         </div>
         <div class="stat">
-          <span class="stat-label">🎯 Essais :</span>
+          <span class="stat-label">Essais:</span>
           <span class="stat-value">{{ attempts }}</span>
         </div>
         <div class="stat">
-          <span class="stat-label">✅ Paires :</span>
+          <span class="stat-label">Paires:</span>
           <span class="stat-value">{{ matchedPairs.length }}/{{ difficulty.pairs }}</span>
         </div>
       </div>
