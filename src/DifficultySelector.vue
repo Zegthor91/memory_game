@@ -6,9 +6,9 @@ const selectedDifficulty = ref(null)
 const gameStarted = ref(false)
 
 const difficulties = [
-  { level: '4x4', size: 4, pairs: 8, label: 'Facile' },
-  { level: '5x5', size: 5, pairs: 12, label: 'Moyen' },
-  { level: '6x6', size: 6, pairs: 18, label: 'Difficile' }
+  { level: '4x4', size: 4, rows: 4, cols: 4, pairs: 8, label: 'Facile' },
+  { level: '4x5', size: 4, rows: 4, cols: 5, pairs: 10, label: 'Moyen' },
+  { level: '6x6', size: 6, rows: 6, cols: 6, pairs: 18, label: 'Difficile' }
 ]
 
 function selectDifficulty(difficulty) {
@@ -48,7 +48,7 @@ function selectDifficulty(difficulty) {
 }
 
 .difficulty-title {
-  color: white;
+  color: #2c3e50;
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -61,38 +61,46 @@ function selectDifficulty(difficulty) {
 }
 
 .difficulty-card {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
+  background: white;
+  border: 2px solid #3498db;
   border-radius: 12px;
   padding: 2rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   text-align: center;
 }
 
 .difficulty-card:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #3498db;
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.difficulty-card:hover h3,
+.difficulty-card:hover .grid-size,
+.difficulty-card:hover .pairs-count {
+  color: white;
 }
 
 .difficulty-card h3 {
-  color: white;
+  color: #2c3e50;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .grid-size {
-  color: white;
+  color: #3498db;
   font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
 .pairs-count {
-  color: rgba(255, 255, 255, 0.8);
+  color: #7f8c8d;
   font-size: 0.9rem;
   margin: 0;
+  transition: color 0.3s ease;
 }
 </style>

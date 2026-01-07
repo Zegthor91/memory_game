@@ -110,6 +110,10 @@ const formatTime = computed(() => {
   }
 })
 
+// Obtenir les colonnes et lignes pour la grille
+const gridCols = computed(() => props.difficulty.cols || props.difficulty.size)
+const gridRows = computed(() => props.difficulty.rows || props.difficulty.size)
+
 // Initialiser le jeu au montage du composant
 onMounted(() => {
   createGame()
@@ -140,8 +144,8 @@ onMounted(() => {
     <div 
       class="game-board" 
       :style="{ 
-        gridTemplateColumns: `repeat(${difficulty.size}, 1fr)`,
-        gridTemplateRows: `repeat(${difficulty.size}, 1fr)`
+        gridTemplateColumns: `repeat(${gridCols}, 1fr)`,
+        gridTemplateRows: `repeat(${gridRows}, 1fr)`
       }"
     >
       <Card
@@ -167,7 +171,7 @@ onMounted(() => {
 }
 
 .game-header h2 {
-  color: white;
+  color: #2c3e50;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -180,20 +184,20 @@ onMounted(() => {
 }
 
 .stat {
-  background: rgba(255, 255, 255, 0.2);
+  background: white;
+  border: 2px solid #ecf0f1;
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
 }
 
 .stat-label {
-  color: rgba(255, 255, 255, 0.9);
+  color: #7f8c8d;
   font-size: 0.9rem;
   margin-right: 0.5rem;
 }
 
 .stat-value {
-  color: white;
+  color: #2c3e50;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -203,6 +207,5 @@ onMounted(() => {
   gap: 10px;
   max-width: 600px;
   margin: 0 auto;
-  aspect-ratio: 1;
 }
 </style>

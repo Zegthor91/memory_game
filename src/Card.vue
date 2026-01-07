@@ -73,13 +73,14 @@ function handleClick() {
 .card-front {
   background: white;
   transform: rotateY(180deg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ecf0f1;
 }
 
 .card-back {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3498db;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover:not(.flipped) .card-inner {
@@ -87,8 +88,12 @@ function handleClick() {
 }
 
 .card.matched .card-front {
-  background: #d4edda;
-  border: 3px solid #28a745;
+  background: #2ecc71;
+  border: 2px solid #27ae60;
+}
+
+.card.matched .card-symbol {
+  color: white;
 }
 
 .card-symbol {
